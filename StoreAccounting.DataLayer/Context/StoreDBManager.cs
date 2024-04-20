@@ -10,9 +10,9 @@ namespace StoreAccounting.DataLayer.Context
     public class StoreDBManager : IDisposable
     {
         StoreAccounting_DBEntities db;
-        public StoreDBManager(StoreAccounting_DBEntities context)
+        public StoreDBManager()
         {
-            db = context;
+            db = new StoreAccounting_DBEntities();
         }
 
         private StoreRepository<Employees> _employeeRepository;
@@ -49,6 +49,11 @@ namespace StoreAccounting.DataLayer.Context
 
                 return _productRepository;
             }
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
         }
 
         public void Dispose()
