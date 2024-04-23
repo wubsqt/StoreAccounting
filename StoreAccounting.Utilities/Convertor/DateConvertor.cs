@@ -16,6 +16,11 @@ namespace Accounting.utility.Convertor
                    pc.GetDayOfMonth(value).ToString("00");
         }
 
+        public static string Timer(DateTime value)
+        {
+            return value.Hour + ":" + value.Minute + ":" + value.Second;
+        }
+
         public static DateTime ToMiladi(DateTime dateTime)
         {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, new System.Globalization.PersianCalendar());
