@@ -46,7 +46,7 @@ namespace StoreAccounting.DataLayer.Services
                 }
             }
 
-            return query;
+            return query.ToList();
         }
 
         public virtual void Insert(TEntity entity)
