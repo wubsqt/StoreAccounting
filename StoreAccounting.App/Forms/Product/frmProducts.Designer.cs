@@ -83,6 +83,7 @@
             this.btnEdit.Size = new System.Drawing.Size(52, 67);
             this.btnEdit.Text = "ویرایش";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -120,6 +121,7 @@
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(150, 71);
+            this.txtFilter.Click += new System.EventHandler(this.txtFilter_Click);
             // 
             // groupBox1
             // 
@@ -130,7 +132,7 @@
             this.groupBox1.Size = new System.Drawing.Size(641, 334);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "محصولات : ";
+            this.groupBox1.Text = "محصولات";
             // 
             // dgvProducts
             // 

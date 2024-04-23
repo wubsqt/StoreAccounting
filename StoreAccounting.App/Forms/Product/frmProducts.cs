@@ -1,4 +1,5 @@
-﻿using StoreAccounting.DataLayer.Context;
+﻿using StoreAccounting.App.Forms.Product;
+using StoreAccounting.DataLayer.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,9 @@ namespace StoreAccounting.App.Forms
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-
+            frmAddOrEditProducts frmAddOrEdit = new frmAddOrEditProducts();
+            if (frmAddOrEdit.ShowDialog() == DialogResult.OK)
+                BindGrid();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -62,6 +65,19 @@ namespace StoreAccounting.App.Forms
             {
                 RtlMessageBox.Show("لطفا شخصی را انتخاب کنید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmAddOrEditProducts frmAddOrEdit = new frmAddOrEditProducts();
+            frmAddOrEdit.Mode = int.Parse(dgvProducts.CurrentRow.Cells[0].Value.ToString());
+            if (frmAddOrEdit.ShowDialog() == DialogResult.OK)
+                BindGrid();
+        }
+
+        private void txtFilter_Click(object sender, EventArgs e)
+        {
+            // TODO : complete this 
         }
     }
 }

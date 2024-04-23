@@ -59,10 +59,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmProducts.cs">
+    <Compile Include="Forms\Product\frmAddOrEditProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmProducts.Designer.cs">
+    <Compile Include="Forms\Product\frmAddOrEditProducts.Designer.cs">
+      <DependentUpon>frmAddOrEditProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\frmProducts.Designer.cs">
       <DependentUpon>frmProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -70,7 +76,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmProducts.resx">
+    <EmbeddedResource Include="Forms\Product\frmAddOrEditProducts.resx">
+      <DependentUpon>frmAddOrEditProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\frmProducts.resx">
       <DependentUpon>frmProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
