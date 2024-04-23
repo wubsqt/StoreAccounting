@@ -30,7 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSartup));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblTimer = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnResetUserName = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,27 +39,38 @@
             this.btnResetPassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btnListCustomers = new System.Windows.Forms.ToolStripButton();
+            this.btnListProducts = new System.Windows.Forms.ToolStripButton();
+            this.btnListEmployees = new System.Windows.Forms.ToolStripButton();
+            this.btnReport = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblTime});
+            this.lblTimer,
+            this.lblDateTime});
             this.statusStrip1.Location = new System.Drawing.Point(0, 601);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1015, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // lblTime
+            // lblTimer
             // 
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(138, 17);
-            this.lblTime.Text = "DateTime should be here";
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(79, 17);
+            this.lblTimer.Text = "Timer be here";
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(138, 17);
+            this.lblDateTime.Text = "DateTime should be here";
             // 
             // toolStrip1
             // 
@@ -98,6 +110,7 @@
             // 
             // btnResetPassword
             // 
+            this.btnResetPassword.Image = global::StoreAccounting.App.Properties.Resources.icons8_password_30;
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(180, 22);
             this.btnResetPassword.Text = "تغییر رمز عبور";
@@ -114,33 +127,72 @@
             this.btnExit.Text = "خروج";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // groupBox1
+            // toolStrip2
             // 
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(0, 25);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 576);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "گزارش هفتگی";
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnListCustomers,
+            this.btnListProducts,
+            this.btnListEmployees,
+            this.btnReport});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(1015, 72);
+            this.toolStrip2.TabIndex = 2;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // groupBox3
+            // btnListCustomers
             // 
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox3.Location = new System.Drawing.Point(319, 25);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(696, 576);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "مدیریت";
+            this.btnListCustomers.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_48;
+            this.btnListCustomers.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnListCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnListCustomers.Name = "btnListCustomers";
+            this.btnListCustomers.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnListCustomers.Size = new System.Drawing.Size(115, 69);
+            this.btnListCustomers.Text = "لیست مشتریان";
+            this.btnListCustomers.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.btnListCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnListProducts
+            // 
+            this.btnListProducts.Image = global::StoreAccounting.App.Properties.Resources.icons8_product_50;
+            this.btnListProducts.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnListProducts.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnListProducts.Name = "btnListProducts";
+            this.btnListProducts.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnListProducts.Size = new System.Drawing.Size(123, 69);
+            this.btnListProducts.Text = "لیست محصولات";
+            this.btnListProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListProducts.Click += new System.EventHandler(this.btnListProducts_Click);
+            // 
+            // btnListEmployees
+            // 
+            this.btnListEmployees.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_48__1_;
+            this.btnListEmployees.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnListEmployees.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnListEmployees.Name = "btnListEmployees";
+            this.btnListEmployees.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnListEmployees.Size = new System.Drawing.Size(114, 69);
+            this.btnListEmployees.Text = "لیست کارمندان";
+            this.btnListEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Image = global::StoreAccounting.App.Properties.Resources.icons8_report_50;
+            this.btnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnReport.Size = new System.Drawing.Size(98, 69);
+            this.btnReport.Text = "گزارش گیری";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReport.ToolTipText = "گزارش گیری";
             // 
             // frmSartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 623);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +209,8 @@
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +219,7 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel lblTime;
+        private System.Windows.Forms.ToolStripStatusLabel lblDateTime;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem btnResetUserName;
@@ -173,8 +227,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ToolStripStatusLabel lblTimer;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnListProducts;
+        private System.Windows.Forms.ToolStripButton btnListCustomers;
+        private System.Windows.Forms.ToolStripButton btnListEmployees;
+        private System.Windows.Forms.ToolStripButton btnReport;
     }
 }
 
