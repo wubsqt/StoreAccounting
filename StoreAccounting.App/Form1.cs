@@ -42,5 +42,10 @@ namespace StoreAccounting.App
             frmProducts frmProducts = new frmProducts();
             frmProducts.ShowDialog();
         }
+
+        private void btnListEmployees_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

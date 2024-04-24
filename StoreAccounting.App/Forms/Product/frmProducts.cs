@@ -31,6 +31,7 @@ namespace StoreAccounting.App.Forms
             {
                 dgvProducts.AutoGenerateColumns = false;
                 dgvProducts.DataSource = db.ProductRepository.GetAll();
+                txtFilter.Text = "";
             }
         }
 
@@ -75,9 +76,13 @@ namespace StoreAccounting.App.Forms
                 BindGrid();
         }
 
-        private void txtFilter_Click(object sender, EventArgs e)
+        private void txtFilter_TextChanged(object sender, EventArgs e)
         {
-            // TODO : complete this 
+            using (StoreDBManager db = new StoreDBManager())
+            {
+                dgvProducts.DataSource = db.ProductRepository.GetAll(p =>
+                    p.Name.Contains(txtFilter.Text) || p.Description.Contains(txtFilter.Text));
+            }
         }
     }
 }

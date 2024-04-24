@@ -100,30 +100,30 @@
             // btnResetUserName
             // 
             this.btnResetUserName.Name = "btnResetUserName";
-            this.btnResetUserName.Size = new System.Drawing.Size(180, 22);
+            this.btnResetUserName.Size = new System.Drawing.Size(149, 22);
             this.btnResetUserName.Text = "تغییر نام کاربری";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 6);
             // 
             // btnResetPassword
             // 
             this.btnResetPassword.Image = global::StoreAccounting.App.Properties.Resources.icons8_password_30;
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(180, 22);
+            this.btnResetPassword.Size = new System.Drawing.Size(149, 22);
             this.btnResetPassword.Text = "تغییر رمز عبور";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
             // 
             // btnExit
             // 
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(180, 22);
+            this.btnExit.Size = new System.Drawing.Size(149, 22);
             this.btnExit.Text = "خروج";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -174,6 +174,7 @@
             this.btnListEmployees.Size = new System.Drawing.Size(114, 69);
             this.btnListEmployees.Text = "لیست کارمندان";
             this.btnListEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListEmployees.Click += new System.EventHandler(this.btnListEmployees_Click);
             // 
             // btnReport
             // 

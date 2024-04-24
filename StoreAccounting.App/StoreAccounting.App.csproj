@@ -166,5 +166,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-update-64 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Employees\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

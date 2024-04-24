@@ -121,7 +121,7 @@
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(150, 71);
-            this.txtFilter.Click += new System.EventHandler(this.txtFilter_Click);
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // groupBox1
             // 
