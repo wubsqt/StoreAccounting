@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employee\frmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\frmEmployees.Designer.cs">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Product\frmAddOrEditProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\frmEmployees.resx">
+      <DependentUpon>frmEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\frmAddOrEditProducts.resx">
       <DependentUpon>frmAddOrEditProducts.cs</DependentUpon>
@@ -166,8 +175,6 @@
   <ItemGroup>
     <None Include="Resources\icons8-update-64 %281%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Employees\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

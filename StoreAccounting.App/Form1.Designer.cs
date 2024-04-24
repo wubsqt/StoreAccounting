@@ -151,6 +151,7 @@
             this.btnListCustomers.Text = "لیست مشتریان";
             this.btnListCustomers.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.btnListCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnListCustomers.Click += new System.EventHandler(this.btnListCustomers_Click);
             // 
             // btnListProducts
             // 

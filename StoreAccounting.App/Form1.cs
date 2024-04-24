@@ -1,5 +1,6 @@
 ﻿using Accounting.utility.Convertor;
 using StoreAccounting.App.Forms;
+using StoreAccounting.App.Forms.Employee;
 using StoreAccounting.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,12 @@ namespace StoreAccounting.App
         }
 
         private void btnListEmployees_Click(object sender, EventArgs e)
+        {
+            frmEmployees frmEmployees = new frmEmployees();
+            frmEmployees.ShowDialog();
+        }
+
+        private void btnListCustomers_Click(object sender, EventArgs e)
         {
 
         }
