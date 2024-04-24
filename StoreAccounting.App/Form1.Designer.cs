@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSartup));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTimer = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,6 +45,7 @@
             this.btnListProducts = new System.Windows.Forms.ToolStripButton();
             this.btnListEmployees = new System.Windows.Forms.ToolStripButton();
             this.btnReport = new System.Windows.Forms.ToolStripButton();
+            this.Maintimer = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -189,6 +191,12 @@
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.ToolTipText = "گزارش گیری";
             // 
+            // Maintimer
+            // 
+            this.Maintimer.Enabled = true;
+            this.Maintimer.Interval = 1000;
+            this.Maintimer.Tick += new System.EventHandler(this.Maintimer_Tick);
+            // 
             // frmSartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -235,6 +243,7 @@
         private System.Windows.Forms.ToolStripButton btnListCustomers;
         private System.Windows.Forms.ToolStripButton btnListEmployees;
         private System.Windows.Forms.ToolStripButton btnReport;
+        private System.Windows.Forms.Timer Maintimer;
     }
 }
 

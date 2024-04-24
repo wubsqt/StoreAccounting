@@ -30,7 +30,7 @@ namespace StoreAccounting.App
         private void UpdateTimer()
         {
             lblDateTime.Text = DateTime.Now.ToShamsi();
-            lblTimer.Text = DateConvertor.Timer(DateTime.Now); // TODO : FIX timer every 1 seccond update
+            lblTimer.Text = DateConvertor.Timer(DateTime.Now);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -53,6 +53,11 @@ namespace StoreAccounting.App
         private void btnListCustomers_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Maintimer_Tick(object sender, EventArgs e)
+        {
+            UpdateTimer();
         }
     }
 }
