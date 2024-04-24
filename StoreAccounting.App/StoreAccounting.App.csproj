@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employee\frmAddOrEditEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\frmAddOrEditEmployees.Designer.cs">
+      <DependentUpon>frmAddOrEditEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Employee\frmEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\frmAddOrEditEmployees.resx">
+      <DependentUpon>frmAddOrEditEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Employee\frmEmployees.resx">
       <DependentUpon>frmEmployees.cs</DependentUpon>

@@ -49,9 +49,10 @@ namespace StoreAccounting.App.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(dgvProducts.CurrentRow != null)
+            if (dgvProducts.CurrentRow != null)
             {
-                if(RtlMessageBox.Show("آیا از حذف اطمینان دارید ؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                if (RtlMessageBox.Show("آیا از حذف اطمینان دارید ؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
                     using (StoreDBManager db = new StoreDBManager())
                     {
                         int Id = int.Parse(dgvProducts.CurrentRow.Cells[0].Value.ToString());

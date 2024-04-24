@@ -70,6 +70,7 @@
             this.btnAddEmployee.Size = new System.Drawing.Size(52, 67);
             this.btnAddEmployee.Text = "افزودن";
             this.btnAddEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnEditEmployee
             // 
@@ -81,6 +82,7 @@
             this.btnEditEmployee.Size = new System.Drawing.Size(52, 67);
             this.btnEditEmployee.Text = "ویرایش";
             this.btnEditEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditEmployee.Click += new System.EventHandler(this.btnEditEmployee_Click);
             // 
             // btnDeleteEmployee
             // 
@@ -92,6 +94,7 @@
             this.btnDeleteEmployee.Size = new System.Drawing.Size(52, 67);
             this.btnDeleteEmployee.Text = "حذف";
             this.btnDeleteEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // btnUpdate
             // 
@@ -104,6 +107,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(64, 67);
             this.btnUpdate.Text = "بروز رسانی";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // toolStripLabel1
             // 
@@ -116,6 +120,7 @@
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(150, 71);
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
             // groupBox1
             // 
@@ -181,6 +186,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "لیست کارمندان";
+            this.Load += new System.EventHandler(this.frmEmployees_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
