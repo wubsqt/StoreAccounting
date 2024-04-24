@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAccounting.App", "StoreAccounting.App\StoreAccounting.App.csproj", "{B525D126-1BFC-49EC-B6BA-46B5D48BD3DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement.App", "StoreAccounting.App\StoreManagement.App.csproj", "{B525D126-1BFC-49EC-B6BA-46B5D48BD3DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAccounting.DataLayer", "StoreAccounting.DataLayer\StoreAccounting.DataLayer.csproj", "{72B3F706-D890-423D-BDB4-E778596EC2CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement.DataLayer", "StoreAccounting.DataLayer\StoreManagement.DataLayer.csproj", "{72B3F706-D890-423D-BDB4-E778596EC2CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAccounting.Utilities", "StoreAccounting.Utilities\StoreAccounting.Utilities.csproj", "{0D19AB58-1939-4F22-AD9E-95596C98728D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement.Utilities", "StoreAccounting.Utilities\StoreManagement.Utilities.csproj", "{0D19AB58-1939-4F22-AD9E-95596C98728D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAccounting.ViewModels", "StoreAccounting.ViewModels\StoreAccounting.ViewModels.csproj", "{813CE426-B81C-483D-A826-BB51A2879B24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement.ViewModels", "StoreAccounting.ViewModels\StoreManagement.ViewModels.csproj", "{813CE426-B81C-483D-A826-BB51A2879B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAccounting.Business", "StoreAccounting.Business\StoreAccounting.Business.csproj", "{C9B65290-63F4-43CD-ABAB-B2DD8D239C08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement.Business", "StoreAccounting.Business\StoreManagement.Business.csproj", "{C9B65290-63F4-43CD-ABAB-B2DD8D239C08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

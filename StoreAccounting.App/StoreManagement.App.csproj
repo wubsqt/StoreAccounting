@@ -124,13 +124,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StoreAccounting.DataLayer\StoreAccounting.DataLayer.csproj">
+    <ProjectReference Include="..\StoreAccounting.DataLayer\StoreManagement.DataLayer.csproj">
       <Project>{72b3f706-d890-423d-bdb4-e778596ec2cc}</Project>
-      <Name>StoreAccounting.DataLayer</Name>
+      <Name>StoreManagement.DataLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StoreAccounting.Utilities\StoreAccounting.Utilities.csproj">
+    <ProjectReference Include="..\StoreAccounting.Utilities\StoreManagement.Utilities.csproj">
       <Project>{0d19ab58-1939-4f22-ad9e-95596c98728d}</Project>
-      <Name>StoreAccounting.Utilities</Name>
+      <Name>StoreManagement.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
