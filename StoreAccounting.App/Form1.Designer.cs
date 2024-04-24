@@ -101,31 +101,33 @@
             // 
             // btnResetUserName
             // 
+            this.btnResetUserName.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_30;
             this.btnResetUserName.Name = "btnResetUserName";
-            this.btnResetUserName.Size = new System.Drawing.Size(149, 22);
+            this.btnResetUserName.Size = new System.Drawing.Size(180, 22);
             this.btnResetUserName.Text = "تغییر نام کاربری";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // btnResetPassword
             // 
             this.btnResetPassword.Image = global::StoreAccounting.App.Properties.Resources.icons8_password_30;
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(149, 22);
+            this.btnResetPassword.Size = new System.Drawing.Size(180, 22);
             this.btnResetPassword.Text = "تغییر رمز عبور";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // btnExit
             // 
+            this.btnExit.Image = global::StoreAccounting.App.Properties.Resources.icons8_close_30;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(149, 22);
+            this.btnExit.Size = new System.Drawing.Size(180, 22);
             this.btnExit.Text = "خروج";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -138,7 +140,7 @@
             this.btnReport});
             this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1015, 72);
+            this.toolStrip2.Size = new System.Drawing.Size(1015, 70);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -149,7 +151,7 @@
             this.btnListCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListCustomers.Name = "btnListCustomers";
             this.btnListCustomers.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnListCustomers.Size = new System.Drawing.Size(115, 69);
+            this.btnListCustomers.Size = new System.Drawing.Size(115, 67);
             this.btnListCustomers.Text = "لیست مشتریان";
             this.btnListCustomers.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.btnListCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -157,36 +159,36 @@
             // 
             // btnListProducts
             // 
-            this.btnListProducts.Image = global::StoreAccounting.App.Properties.Resources.icons8_product_50;
+            this.btnListProducts.Image = global::StoreAccounting.App.Properties.Resources.icons8_product_48;
             this.btnListProducts.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnListProducts.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListProducts.Name = "btnListProducts";
             this.btnListProducts.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnListProducts.Size = new System.Drawing.Size(123, 69);
+            this.btnListProducts.Size = new System.Drawing.Size(123, 67);
             this.btnListProducts.Text = "لیست محصولات";
             this.btnListProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListProducts.Click += new System.EventHandler(this.btnListProducts_Click);
             // 
             // btnListEmployees
             // 
-            this.btnListEmployees.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_48__1_;
+            this.btnListEmployees.Image = global::StoreAccounting.App.Properties.Resources.icons8_employee_48;
             this.btnListEmployees.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnListEmployees.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnListEmployees.Name = "btnListEmployees";
             this.btnListEmployees.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnListEmployees.Size = new System.Drawing.Size(114, 69);
+            this.btnListEmployees.Size = new System.Drawing.Size(114, 67);
             this.btnListEmployees.Text = "لیست کارمندان";
             this.btnListEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnListEmployees.Click += new System.EventHandler(this.btnListEmployees_Click);
             // 
             // btnReport
             // 
-            this.btnReport.Image = global::StoreAccounting.App.Properties.Resources.icons8_report_50;
+            this.btnReport.Image = global::StoreAccounting.App.Properties.Resources.icons8_report_48;
             this.btnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnReport.Size = new System.Drawing.Size(98, 69);
+            this.btnReport.Size = new System.Drawing.Size(98, 67);
             this.btnReport.Text = "گزارش گیری";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.ToolTipText = "گزارش گیری";

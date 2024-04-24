@@ -184,6 +184,29 @@
   <ItemGroup>
     <None Include="Resources\icons8-update-64 %281%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-accounting-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-accounting-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-username-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
