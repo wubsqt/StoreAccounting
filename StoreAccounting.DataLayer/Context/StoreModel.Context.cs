@@ -26,7 +26,7 @@ namespace StoreAccounting.DataLayer.Context
         }
     
         public virtual DbSet<Employees> Employees { get; set; }
-        public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Customers> Customers { get; set; }
     }
 }

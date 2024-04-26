@@ -47,6 +47,8 @@ namespace StoreAccounting.DataLayer.Context
             }
         }
 
+        //private StoreRepository<Customers> _customerRepository;
+
         public void Save()
         {
             db.SaveChanges();

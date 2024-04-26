@@ -1,5 +1,6 @@
 ﻿using Accounting.utility.Convertor;
 using StoreAccounting.App.Forms;
+using StoreAccounting.App.Forms.Customer;
 using StoreAccounting.App.Forms.Employee;
 using StoreAccounting.DataLayer.Context;
 using System;
@@ -52,7 +53,8 @@ namespace StoreAccounting.App
 
         private void btnListCustomers_Click(object sender, EventArgs e)
         {
-
+            frmCustomers frmCustomers = new frmCustomers();
+            frmCustomers.ShowDialog();
         }
 
         private void Maintimer_Tick(object sender, EventArgs e)

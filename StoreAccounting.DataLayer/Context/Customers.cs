@@ -18,8 +18,7 @@ namespace StoreAccounting.DataLayer.Context
         public string FullName { get; set; }
         public string Mobile { get; set; }
         public string Address { get; set; }
-        public Nullable<int> ShopingList { get; set; }
-    
-        public virtual Products Products { get; set; }
+        public string Image { get; set; }
+        public string ShopingList { get; set; }
     }
 }
