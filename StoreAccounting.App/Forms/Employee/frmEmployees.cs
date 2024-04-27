@@ -37,7 +37,7 @@ namespace StoreAccounting.App.Forms.Employee
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
         {
-            if (dgvEmployees.CurrentRow != null)
+            if (dgvEmployees.SelectedRows != null)
             {
                 if (RtlMessageBox.Show("آیا از حذف اطمینان دارید ؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -49,6 +49,11 @@ namespace StoreAccounting.App.Forms.Employee
                         BindGrid();
                     }
                 }
+            }
+
+            else
+            {
+                RtlMessageBox.Show("لطفا شخصی را انتخاب کنید.", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

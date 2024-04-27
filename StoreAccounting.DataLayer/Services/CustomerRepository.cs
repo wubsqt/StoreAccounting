@@ -23,7 +23,8 @@ namespace StoreAccounting.DataLayer.Services
             {
                 CustomerId = c.CustomerId,
                 FullName = c.FullName,
-                Mobile = c.Mobile
+                Mobile = c.Mobile,
+                Address = c.Address
             }).ToList();
         }
     }

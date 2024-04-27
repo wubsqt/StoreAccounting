@@ -50,7 +50,7 @@ namespace StoreAccounting.App.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvProducts.CurrentRow != null)
+            if (dgvProducts.SelectedRows != null)
             {
                 if (RtlMessageBox.Show("آیا از حذف اطمینان دارید ؟", "هشدار", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

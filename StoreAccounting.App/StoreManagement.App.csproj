@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customer\AddOrEditOrViewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\AddOrEditOrViewCustomer.Designer.cs">
+      <DependentUpon>AddOrEditOrViewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Customer\frmCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\AddOrEditOrViewCustomer.resx">
+      <DependentUpon>AddOrEditOrViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\frmCustomers.resx">
       <DependentUpon>frmCustomers.cs</DependentUpon>

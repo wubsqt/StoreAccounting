@@ -40,8 +40,8 @@
             this.btnAddCustomer = new System.Windows.Forms.ToolStripButton();
             this.btnEditCustomer = new System.Windows.Forms.ToolStripButton();
             this.btnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
-            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.btnViewInfo = new System.Windows.Forms.ToolStripButton();
+            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtFilter = new System.Windows.Forms.ToolStripTextBox();
             this.groupBox2.SuspendLayout();
@@ -141,6 +141,7 @@
             this.btnAddCustomer.Size = new System.Drawing.Size(52, 67);
             this.btnAddCustomer.Text = "افزودن";
             this.btnAddCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnEditCustomer
             // 
@@ -152,6 +153,7 @@
             this.btnEditCustomer.Size = new System.Drawing.Size(52, 67);
             this.btnEditCustomer.Text = "ویرایش";
             this.btnEditCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEditCustomer.Click += new System.EventHandler(this.btnEditCustomer_Click);
             // 
             // btnDeleteCustomer
             // 
@@ -163,6 +165,19 @@
             this.btnDeleteCustomer.Size = new System.Drawing.Size(52, 67);
             this.btnDeleteCustomer.Text = "حذف";
             this.btnDeleteCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
+            // 
+            // btnViewInfo
+            // 
+            this.btnViewInfo.Image = global::StoreAccounting.App.Properties.Resources.icons8_information_48;
+            this.btnViewInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnViewInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnViewInfo.Margin = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.btnViewInfo.Name = "btnViewInfo";
+            this.btnViewInfo.Size = new System.Drawing.Size(95, 67);
+            this.btnViewInfo.Text = "مشاهده اطلاعات";
+            this.btnViewInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnViewInfo.Click += new System.EventHandler(this.btnViewInfo_Click);
             // 
             // btnUpdate
             // 
@@ -176,17 +191,6 @@
             this.btnUpdate.Text = "بروز رسانی";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnViewInfo
-            // 
-            this.btnViewInfo.Image = global::StoreAccounting.App.Properties.Resources.icons8_information_48;
-            this.btnViewInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnViewInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnViewInfo.Margin = new System.Windows.Forms.Padding(15, 2, 15, 2);
-            this.btnViewInfo.Name = "btnViewInfo";
-            this.btnViewInfo.Size = new System.Drawing.Size(95, 67);
-            this.btnViewInfo.Text = "مشاهده اطلاعات";
-            this.btnViewInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripLabel1
             // 
