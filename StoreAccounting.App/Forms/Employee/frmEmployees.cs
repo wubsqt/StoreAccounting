@@ -31,6 +31,7 @@ namespace StoreAccounting.App.Forms.Employee
                 dgvEmployees.AutoGenerateColumns = false;
                 dgvEmployees.DataSource = db.EmployeeRepository.GetAll();
                 txtFilter.Text = "";
+                txtFilter.Focus();
             }
         }
 

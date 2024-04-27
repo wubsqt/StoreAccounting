@@ -141,6 +141,10 @@
       <Project>{0d19ab58-1939-4f22-ad9e-95596c98728d}</Project>
       <Name>StoreManagement.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StoreAccounting.ViewModels\StoreManagement.ViewModels.csproj">
+      <Project>{813ce426-b81c-483d-a826-bb51a2879b24}</Project>
+      <Name>StoreManagement.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-product-50.png" />
@@ -217,6 +221,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-report-48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-information-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

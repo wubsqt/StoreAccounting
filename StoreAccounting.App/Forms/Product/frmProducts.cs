@@ -32,6 +32,7 @@ namespace StoreAccounting.App.Forms
                 dgvProducts.AutoGenerateColumns = false;
                 dgvProducts.DataSource = db.ProductRepository.GetAll();
                 txtFilter.Text = "";
+                txtFilter.Focus();
             }
         }
 
