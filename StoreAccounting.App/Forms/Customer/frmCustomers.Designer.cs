@@ -31,18 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAddCustomer = new System.Windows.Forms.ToolStripButton();
             this.btnEditCustomer = new System.Windows.Forms.ToolStripButton();
             this.btnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
+            this.btnViewInfo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtFilter = new System.Windows.Forms.ToolStripTextBox();
-            this.btnViewInfo = new System.Windows.Forms.ToolStripButton();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,14 +68,61 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "مشتریان";
             // 
+            // dgvCustomers
+            // 
+            this.dgvCustomers.AllowUserToAddRows = false;
+            this.dgvCustomers.AllowUserToDeleteRows = false;
+            this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCustomers.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.FullName,
+            this.Mobile,
+            this.Address});
+            this.dgvCustomers.Location = new System.Drawing.Point(6, 21);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.ReadOnly = true;
+            this.dgvCustomers.Size = new System.Drawing.Size(566, 448);
+            this.dgvCustomers.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "CustomerId";
+            this.ID.HeaderText = "id";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "نام";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // Mobile
+            // 
+            this.Mobile.DataPropertyName = "Mobile";
+            this.Mobile.HeaderText = "موبایل";
+            this.Mobile.Name = "Mobile";
+            this.Mobile.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "آدرس";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAddCustomer,
             this.btnEditCustomer,
             this.btnDeleteCustomer,
-            this.btnUpdate,
             this.btnViewInfo,
+            this.btnUpdate,
             this.toolStripLabel1,
             this.txtFilter});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -124,6 +175,18 @@
             this.btnUpdate.Size = new System.Drawing.Size(64, 67);
             this.btnUpdate.Text = "بروز رسانی";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnViewInfo
+            // 
+            this.btnViewInfo.Image = global::StoreAccounting.App.Properties.Resources.icons8_information_48;
+            this.btnViewInfo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnViewInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnViewInfo.Margin = new System.Windows.Forms.Padding(15, 2, 15, 2);
+            this.btnViewInfo.Name = "btnViewInfo";
+            this.btnViewInfo.Size = new System.Drawing.Size(95, 67);
+            this.btnViewInfo.Text = "مشاهده اطلاعات";
+            this.btnViewInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripLabel1
             // 
@@ -136,28 +199,6 @@
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(150, 71);
-            // 
-            // btnViewInfo
-            // 
-            this.btnViewInfo.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_30;
-            this.btnViewInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnViewInfo.Margin = new System.Windows.Forms.Padding(20, 2, 20, 2);
-            this.btnViewInfo.Name = "btnViewInfo";
-            this.btnViewInfo.Size = new System.Drawing.Size(95, 67);
-            this.btnViewInfo.Text = "مشاهده اطلاعات";
-            this.btnViewInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // dgvCustomers
-            // 
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(6, 21);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.Size = new System.Drawing.Size(566, 448);
-            this.dgvCustomers.TabIndex = 0;
             // 
             // frmCustomers
             // 
@@ -177,9 +218,9 @@
             this.Text = "لیست مشتریان ثابت";
             this.Load += new System.EventHandler(this.frmCustomers_Load);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +239,9 @@
         private System.Windows.Forms.ToolStripTextBox txtFilter;
         private System.Windows.Forms.ToolStripButton btnViewInfo;
         private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }

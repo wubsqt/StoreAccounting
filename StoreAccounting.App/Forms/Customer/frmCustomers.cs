@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreAccounting.DataLayer.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,23 @@ namespace StoreAccounting.App.Forms.Customer
 
         private void frmCustomers_Load(object sender, EventArgs e)
         {
+            BindGrid();   
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void BindGrid()
+        {
+            using (StoreDBManager db = new StoreDBManager())
+            {
+                dgvCustomers.AutoGenerateColumns = false;
+                dgvCustomers.DataSource = db.CustomerRepo.GetAllCustomer();
+                txtFilter.Text = "";
+                txtFilter.Focus();
+            }
         }
     }
 }
