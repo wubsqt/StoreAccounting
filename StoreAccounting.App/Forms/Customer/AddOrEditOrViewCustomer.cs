@@ -36,17 +36,35 @@ namespace StoreAccounting.App.Forms.Customer
         void ModeChecker()
         {
             if (Mode == 1)
-            {
-                // TODO : Fix this 
-                this.Text = "ویرایش";
-                //using(StoreDBManager db = new StoreDBManager())
-                //{
-                //    db.CustomerRepository.GetAll()
-                //}
+                EditMode();
 
-            }
             else if (Mode == 2)
-                this.Text = "نمایش اطلاعات";
+                ShowInfo();
+        }
+
+        void EditMode()
+        {
+            this.Text = "ویرایش";
+
+            using(StoreDBManager db = new StoreDBManager())
+            {
+                Customers customer = db.CustomerRepository.GetByEntity(CustomerId);
+                txtName.Text = customer.FullName;
+                txtNumber.Value = int.Parse(customer.Mobile);
+                txtAddress.Text = customer.Address;
+                pcCustomer.ImageLocation = Application.StartupPath + "/Images/" + customer.Image;
+            }
+        }
+
+        void ShowInfo()
+        {
+            EditMode();
+            this.Text = "نمایش اطلاعات";
+            txtName.ReadOnly = true;
+            txtNumber.ReadOnly = true;
+            txtAddress.ReadOnly = true;
+            btnSubmit.Enabled = false;
+            btnSelectImage.Enabled = false;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -55,6 +73,32 @@ namespace StoreAccounting.App.Forms.Customer
             {
                 SubmitAddCustomer();
             }
+
+            if(Mode == 1)
+            {
+                SubmitEditCustomer();
+            }
+
+        }
+
+        private void SubmitEditCustomer()
+        {
+            using(StoreDBManager db = new StoreDBManager())
+            {
+                Customers customer = new Customers()
+                {
+                    CustomerId = this.CustomerId,
+                    FullName = txtName.Text,
+                    Mobile = txtNumber.Value.ToString(),
+                    Address = txtAddress.Text,
+                    // TODO : Fix image load in here or in submit
+                    Image = pcCustomer.ImageLocation
+                };
+
+                db.CustomerRepository.Update(customer);
+                db.Save();
+            }
+
             DialogResult = DialogResult.OK;
         }
 
@@ -81,6 +125,8 @@ namespace StoreAccounting.App.Forms.Customer
                 };
                 db.CustomerRepository.Insert(customer);
                 db.Save();
+
+                DialogResult = DialogResult.OK;
             }
         }
 

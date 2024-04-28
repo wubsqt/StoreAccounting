@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrEditOrViewCustomer));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pcCustomer = new System.Windows.Forms.PictureBox();
             this.txtNumber = new System.Windows.Forms.NumericUpDown();
             this.btnSelectImage = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,15 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pcCustomer = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,6 +64,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مشتری";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pcCustomer);
+            this.groupBox2.Location = new System.Drawing.Point(6, 21);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(179, 194);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "تصویر";
+            // 
+            // pcCustomer
+            // 
+            this.pcCustomer.ErrorImage = global::StoreAccounting.App.Properties.Resources.icons8_user_100;
+            this.pcCustomer.Location = new System.Drawing.Point(6, 15);
+            this.pcCustomer.Name = "pcCustomer";
+            this.pcCustomer.Size = new System.Drawing.Size(167, 173);
+            this.pcCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcCustomer.TabIndex = 7;
+            this.pcCustomer.TabStop = false;
             // 
             // txtNumber
             // 
@@ -129,25 +149,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "نام :";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.pcCustomer);
-            this.groupBox2.Location = new System.Drawing.Point(6, 21);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(179, 194);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "تصویر";
-            // 
-            // pcCustomer
-            // 
-            this.pcCustomer.Location = new System.Drawing.Point(6, 15);
-            this.pcCustomer.Name = "pcCustomer";
-            this.pcCustomer.Size = new System.Drawing.Size(167, 173);
-            this.pcCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcCustomer.TabIndex = 7;
-            this.pcCustomer.TabStop = false;
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(441, 271);
@@ -191,9 +192,9 @@
             this.Load += new System.EventHandler(this.AddOrEditOrViewCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumber)).EndInit();
             this.ResumeLayout(false);
 
         }
