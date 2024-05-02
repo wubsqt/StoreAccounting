@@ -1,6 +1,7 @@
 ﻿using StoreAccounting.DataLayer.Context;
 using StoreAccounting.DataLayer.Repositories;
 using StoreAccounting.ViewModels;
+using StoreAccounting.ViewModels.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,15 @@ namespace StoreAccounting.DataLayer.Services
                 Mobile = c.Mobile,
                 Address = c.Address
             }).ToList();
+        }
+
+        public List<CustomerShopingListViewModel> GetShopingList(int Id)
+        {
+            return db.Customers.Where(c => c.CustomerId == Id)
+                .Select(c => new CustomerShopingListViewModel()
+                {
+                    ShopingList = c.ShopingList
+                }).ToList();
         }
     }
 }
