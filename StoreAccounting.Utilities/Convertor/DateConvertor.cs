@@ -11,17 +11,16 @@ namespace Accounting.utility.Convertor
     {
         public static string ToShamsi(this DateTime value)
         {
-            PersianCalendar pc =new PersianCalendar();
-            return pc.GetYear(value) + "/" + pc.GetMonth(value).ToString("00") + "/" +
-                   pc.GetDayOfMonth(value).ToString("00");
+            PersianCalendar p = new PersianCalendar();
+            return $"{p.GetYear(value)}/{p.GetMonth(value):00}/{p.GetDayOfMonth(value):00}";
         }
 
         public static string Timer(DateTime value)
         {
-            return value.Hour + ":" + value.Minute + ":" + value.Second;
+            return $"{value.Hour}:{value.Minute}:{value.Second}";
         }
 
-        public static DateTime ToMiladi(DateTime dateTime)
+        public static DateTime ToMiladi(this DateTime dateTime)
         {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, new System.Globalization.PersianCalendar());
         }
