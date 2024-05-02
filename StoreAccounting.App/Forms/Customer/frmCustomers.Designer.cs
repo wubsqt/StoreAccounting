@@ -44,6 +44,10 @@
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtFilter = new System.Windows.Forms.ToolStripTextBox();
+            this.txtShopingList = new System.Windows.Forms.TextBox();
+            this.btnEditShopingList = new System.Windows.Forms.Button();
+            this.btnSaveShopingList = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -51,6 +55,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSaveShopingList);
+            this.groupBox1.Controls.Add(this.btnEditShopingList);
+            this.groupBox1.Controls.Add(this.txtShopingList);
             this.groupBox1.Location = new System.Drawing.Point(596, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 475);
@@ -85,6 +92,7 @@
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.Size = new System.Drawing.Size(566, 448);
             this.dgvCustomers.TabIndex = 0;
+            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
             // ID
             // 
@@ -203,6 +211,38 @@
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(150, 71);
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // txtShopingList
+            // 
+            this.txtShopingList.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShopingList.Location = new System.Drawing.Point(6, 21);
+            this.txtShopingList.Multiline = true;
+            this.txtShopingList.Name = "txtShopingList";
+            this.txtShopingList.ReadOnly = true;
+            this.txtShopingList.Size = new System.Drawing.Size(164, 363);
+            this.txtShopingList.TabIndex = 0;
+            // 
+            // btnEditShopingList
+            // 
+            this.btnEditShopingList.Location = new System.Drawing.Point(6, 390);
+            this.btnEditShopingList.Name = "btnEditShopingList";
+            this.btnEditShopingList.Size = new System.Drawing.Size(164, 29);
+            this.btnEditShopingList.TabIndex = 1;
+            this.btnEditShopingList.Text = "ویرایش";
+            this.btnEditShopingList.UseVisualStyleBackColor = true;
+            this.btnEditShopingList.Click += new System.EventHandler(this.btnEditShopingList_Click);
+            // 
+            // btnSaveShopingList
+            // 
+            this.btnSaveShopingList.Enabled = false;
+            this.btnSaveShopingList.Location = new System.Drawing.Point(6, 425);
+            this.btnSaveShopingList.Name = "btnSaveShopingList";
+            this.btnSaveShopingList.Size = new System.Drawing.Size(164, 29);
+            this.btnSaveShopingList.TabIndex = 2;
+            this.btnSaveShopingList.Text = "ذخیره";
+            this.btnSaveShopingList.UseVisualStyleBackColor = true;
+            this.btnSaveShopingList.Click += new System.EventHandler(this.btnSaveShopingList_Click);
             // 
             // frmCustomers
             // 
@@ -221,6 +261,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "لیست مشتریان ثابت";
             this.Load += new System.EventHandler(this.frmCustomers_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -247,5 +289,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.TextBox txtShopingList;
+        private System.Windows.Forms.Button btnSaveShopingList;
+        private System.Windows.Forms.Button btnEditShopingList;
     }
 }

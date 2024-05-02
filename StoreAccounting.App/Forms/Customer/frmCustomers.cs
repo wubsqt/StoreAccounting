@@ -1,10 +1,12 @@
 ﻿using StoreAccounting.DataLayer.Context;
+using StoreAccounting.ViewModels.Customers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,8 +35,11 @@ namespace StoreAccounting.App.Forms.Customer
             using (StoreDBManager db = new StoreDBManager())
             {
                 dgvCustomers.AutoGenerateColumns = false;
+                btnSaveShopingList.Enabled = false;
+                txtShopingList.ReadOnly = true;
                 dgvCustomers.DataSource = db.CustomerRepo.GetAllCustomer();
                 txtFilter.Text = "";
+                txtShopingList.Text = "برای نمایش لیست خرید روی شخصی کلیک کنید";
                 txtFilter.Focus();
             }
         }
@@ -104,6 +109,51 @@ namespace StoreAccounting.App.Forms.Customer
             else
             {
                 RtlMessageBox.Show("لطفا شخصی را انتخاب کنید.", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            using(StoreDBManager db = new StoreDBManager())
+            {
+                dgvCustomers.DataSource = db.CustomerRepository.GetAll(c =>
+                    c.FullName.Contains(txtFilter.Text) ||
+                    c.Mobile.Contains(txtFilter.Text) || 
+                    c.Address.Contains(txtFilter.Text));
+            }
+        }
+
+        private void dgvCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtShopingList.Text = "";
+            int Id = int.Parse(dgvCustomers.CurrentRow.Cells[0].Value.ToString());
+            using (StoreDBManager db = new StoreDBManager())
+            {
+                // TODO : Fix one line for one product
+
+                db.CustomerRepo.GetShopingList(Id)
+                    .Select(x => x.ShopingList)
+                    .ToList()
+                    .ForEach(x => txtShopingList.Text += x + "\n");
+            }
+        }
+
+        private void btnEditShopingList_Click(object sender, EventArgs e)
+        {
+            txtShopingList.ReadOnly = !txtShopingList.ReadOnly;
+            btnSaveShopingList.Enabled = !btnSaveShopingList.Enabled;
+        }
+
+        private void btnSaveShopingList_Click(object sender, EventArgs e)
+        {
+            using(StoreDBManager db = new StoreDBManager())
+            {
+                int Id = int.Parse(dgvCustomers.CurrentRow.Cells[0].Value.ToString());
+                Customers customer = db.CustomerRepository.GetByEntity(Id);
+                customer.ShopingList = txtShopingList.Text;
+                db.CustomerRepository.Update(customer);
+                db.Save();
+                BindGrid();
             }
         }
     }

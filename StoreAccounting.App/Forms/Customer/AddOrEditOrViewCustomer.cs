@@ -85,14 +85,20 @@ namespace StoreAccounting.App.Forms.Customer
         {
             using(StoreDBManager db = new StoreDBManager())
             {
+                // TODO : Clean This Code Here And Extract Method Uniq Name
+
+                string rootFolder = Application.StartupPath + @"\Images\";
+                string UniqName = Guid.NewGuid().ToString();
+                string Extension = Path.GetExtension(pcCustomer.ImageLocation);
+                File.Copy(pcCustomer.ImageLocation, rootFolder + UniqName + Extension);
+
                 Customers customer = new Customers()
                 {
                     CustomerId = this.CustomerId,
                     FullName = txtName.Text,
                     Mobile = txtNumber.Value.ToString(),
                     Address = txtAddress.Text,
-                    // TODO : Fix image load in here or in submit
-                    Image = pcCustomer.ImageLocation
+                    Image = UniqName + Extension
                 };
 
                 db.CustomerRepository.Update(customer);
