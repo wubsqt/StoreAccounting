@@ -2,6 +2,7 @@
 using StoreAccounting.App.Forms;
 using StoreAccounting.App.Forms.Customer;
 using StoreAccounting.App.Forms.Employee;
+using StoreAccounting.App.Forms.Login;
 using StoreAccounting.DataLayer.Context;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,10 @@ namespace StoreAccounting.App
 
         private void frmSartup_Load(object sender, EventArgs e)
         {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+                this.Show();
             UpdateTimer();
         }
 
@@ -60,6 +65,12 @@ namespace StoreAccounting.App
         private void Maintimer_Tick(object sender, EventArgs e)
         {
             UpdateTimer();
+        }
+
+        private void ChangeUserOrPass_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
         }
     }
 }

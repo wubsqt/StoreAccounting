@@ -105,6 +105,7 @@
             this.btnResetUserName.Name = "btnResetUserName";
             this.btnResetUserName.Size = new System.Drawing.Size(180, 22);
             this.btnResetUserName.Text = "تغییر نام کاربری";
+            this.btnResetUserName.Click += new System.EventHandler(this.ChangeUserOrPass_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -117,6 +118,7 @@
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(180, 22);
             this.btnResetPassword.Text = "تغییر رمز عبور";
+            this.btnResetPassword.Click += new System.EventHandler(this.ChangeUserOrPass_Click);
             // 
             // toolStripMenuItem2
             // 
