@@ -129,12 +129,10 @@ namespace StoreAccounting.App.Forms.Customer
             int Id = int.Parse(dgvCustomers.CurrentRow.Cells[0].Value.ToString());
             using (StoreDBManager db = new StoreDBManager())
             {
-                // TODO : Fix one line for one product
-
                 db.CustomerRepo.GetShopingList(Id)
                     .Select(x => x.ShopingList)
                     .ToList()
-                    .ForEach(x => txtShopingList.Text += x + "\n");
+                    .ForEach(x => txtShopingList.Text += x + "\n\n");
             }
         }
 
