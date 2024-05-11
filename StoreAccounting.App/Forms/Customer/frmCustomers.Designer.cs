@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSaveShopingList = new System.Windows.Forms.Button();
+            this.btnEditShopingList = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +47,6 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtFilter = new System.Windows.Forms.ToolStripTextBox();
             this.txtShopingList = new System.Windows.Forms.TextBox();
-            this.btnEditShopingList = new System.Windows.Forms.Button();
-            this.btnSaveShopingList = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
@@ -64,6 +64,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "لیست خرید";
+            // 
+            // btnSaveShopingList
+            // 
+            this.btnSaveShopingList.Enabled = false;
+            this.btnSaveShopingList.Location = new System.Drawing.Point(6, 425);
+            this.btnSaveShopingList.Name = "btnSaveShopingList";
+            this.btnSaveShopingList.Size = new System.Drawing.Size(164, 29);
+            this.btnSaveShopingList.TabIndex = 2;
+            this.btnSaveShopingList.Text = "ذخیره";
+            this.btnSaveShopingList.UseVisualStyleBackColor = true;
+            this.btnSaveShopingList.Click += new System.EventHandler(this.btnSaveShopingList_Click);
+            // 
+            // btnEditShopingList
+            // 
+            this.btnEditShopingList.Location = new System.Drawing.Point(6, 390);
+            this.btnEditShopingList.Name = "btnEditShopingList";
+            this.btnEditShopingList.Size = new System.Drawing.Size(164, 29);
+            this.btnEditShopingList.TabIndex = 1;
+            this.btnEditShopingList.Text = "ویرایش";
+            this.btnEditShopingList.UseVisualStyleBackColor = true;
+            this.btnEditShopingList.Click += new System.EventHandler(this.btnEditShopingList_Click);
             // 
             // groupBox2
             // 
@@ -223,27 +244,6 @@
             this.txtShopingList.Size = new System.Drawing.Size(164, 363);
             this.txtShopingList.TabIndex = 0;
             // 
-            // btnEditShopingList
-            // 
-            this.btnEditShopingList.Location = new System.Drawing.Point(6, 390);
-            this.btnEditShopingList.Name = "btnEditShopingList";
-            this.btnEditShopingList.Size = new System.Drawing.Size(164, 29);
-            this.btnEditShopingList.TabIndex = 1;
-            this.btnEditShopingList.Text = "ویرایش";
-            this.btnEditShopingList.UseVisualStyleBackColor = true;
-            this.btnEditShopingList.Click += new System.EventHandler(this.btnEditShopingList_Click);
-            // 
-            // btnSaveShopingList
-            // 
-            this.btnSaveShopingList.Enabled = false;
-            this.btnSaveShopingList.Location = new System.Drawing.Point(6, 425);
-            this.btnSaveShopingList.Name = "btnSaveShopingList";
-            this.btnSaveShopingList.Size = new System.Drawing.Size(164, 29);
-            this.btnSaveShopingList.TabIndex = 2;
-            this.btnSaveShopingList.Text = "ذخیره";
-            this.btnSaveShopingList.UseVisualStyleBackColor = true;
-            this.btnSaveShopingList.Click += new System.EventHandler(this.btnSaveShopingList_Click);
-            // 
             // frmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -289,8 +289,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.TextBox txtShopingList;
         private System.Windows.Forms.Button btnSaveShopingList;
         private System.Windows.Forms.Button btnEditShopingList;
+        private System.Windows.Forms.TextBox txtShopingList;
     }
 }
