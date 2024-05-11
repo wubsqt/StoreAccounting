@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using ValidationComponents;
 
 namespace StoreAccounting.App.Forms.Customer
 {
@@ -22,7 +23,7 @@ namespace StoreAccounting.App.Forms.Customer
             1 : Edit
             2 : View Info */
         public int Mode = 0;
-        
+
         public AddOrEditOrViewCustomer()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace StoreAccounting.App.Forms.Customer
         {
             this.Text = "ویرایش";
 
-            using(StoreDBManager db = new StoreDBManager())
+            using (StoreDBManager db = new StoreDBManager())
             {
                 Customers customer = db.CustomerRepository.GetByEntity(CustomerId);
                 txtName.Text = customer.FullName;
@@ -69,21 +70,24 @@ namespace StoreAccounting.App.Forms.Customer
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (Mode == 0)
+            if (BaseValidator.IsFormValid(this.components) && txtNumber.Value != default)
             {
-                SubmitAddCustomer();
+                if (Mode == 0)
+                    SubmitAddCustomer();
+
+                if (Mode == 1)
+                    SubmitEditCustomer();
             }
 
-            if(Mode == 1)
+            else
             {
-                SubmitEditCustomer();
+                RtlMessageBox.Show("لطفا افزون بر نام،شماره را هم وارد کنید.", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void SubmitEditCustomer()
         {
-            using(StoreDBManager db = new StoreDBManager())
+            using (StoreDBManager db = new StoreDBManager())
             {
                 // TODO : Clean This Code Here And Extract Method Uniq Name
 
@@ -118,7 +122,8 @@ namespace StoreAccounting.App.Forms.Customer
 
             string UniqName = Guid.NewGuid().ToString();
             string Extension = Path.GetExtension(pcCustomer.ImageLocation);
-            File.Copy(pcCustomer.ImageLocation, rootFolder + UniqName + Extension);
+            if (Extension != string.Empty)
+                File.Copy(pcCustomer.ImageLocation, rootFolder + UniqName + Extension);
 
             using (StoreDBManager db = new StoreDBManager())
             {
