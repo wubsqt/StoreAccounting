@@ -152,6 +152,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StoreAccounting.Business\StoreManagement.Business.csproj">
+      <Project>{c9b65290-63f4-43cd-abab-b2dd8d239c08}</Project>
+      <Name>StoreManagement.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StoreAccounting.DataLayer\StoreManagement.DataLayer.csproj">
       <Project>{72b3f706-d890-423d-bdb4-e778596ec2cc}</Project>
       <Name>StoreManagement.DataLayer</Name>

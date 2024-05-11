@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSartup));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblTimer = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblDateTime = new System.Windows.Forms.ToolStripStatusLabel();
@@ -46,9 +49,14 @@
             this.btnListEmployees = new System.Windows.Forms.ToolStripButton();
             this.btnReport = new System.Windows.Forms.ToolStripButton();
             this.Maintimer = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnUpdateChart = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -103,33 +111,33 @@
             // 
             this.btnResetUserName.Image = global::StoreAccounting.App.Properties.Resources.icons8_customer_30;
             this.btnResetUserName.Name = "btnResetUserName";
-            this.btnResetUserName.Size = new System.Drawing.Size(180, 22);
+            this.btnResetUserName.Size = new System.Drawing.Size(149, 22);
             this.btnResetUserName.Text = "تغییر نام کاربری";
             this.btnResetUserName.Click += new System.EventHandler(this.ChangeUserOrPass_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 6);
             // 
             // btnResetPassword
             // 
             this.btnResetPassword.Image = global::StoreAccounting.App.Properties.Resources.icons8_password_30;
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(180, 22);
+            this.btnResetPassword.Size = new System.Drawing.Size(149, 22);
             this.btnResetPassword.Text = "تغییر رمز عبور";
             this.btnResetPassword.Click += new System.EventHandler(this.ChangeUserOrPass_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 6);
             // 
             // btnExit
             // 
             this.btnExit.Image = global::StoreAccounting.App.Properties.Resources.icons8_close_30;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(180, 22);
+            this.btnExit.Size = new System.Drawing.Size(149, 22);
             this.btnExit.Text = "خروج";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -139,7 +147,8 @@
             this.btnListCustomers,
             this.btnListProducts,
             this.btnListEmployees,
-            this.btnReport});
+            this.btnReport,
+            this.btnUpdateChart});
             this.toolStrip2.Location = new System.Drawing.Point(0, 25);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1015, 70);
@@ -201,11 +210,52 @@
             this.Maintimer.Interval = 1000;
             this.Maintimer.Tick += new System.EventHandler(this.Maintimer_Tick);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.chartMain);
+            this.groupBox1.Location = new System.Drawing.Point(0, 104);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1015, 500);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "نمودار وضعیت";
+            // 
+            // chartMain
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartMain.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMain.Legends.Add(legend2);
+            this.chartMain.Location = new System.Drawing.Point(6, 22);
+            this.chartMain.Name = "chartMain";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartMain.Series.Add(series2);
+            this.chartMain.Size = new System.Drawing.Size(979, 472);
+            this.chartMain.TabIndex = 4;
+            this.chartMain.Text = "chart1";
+            // 
+            // btnUpdateChart
+            // 
+            this.btnUpdateChart.Image = global::StoreAccounting.App.Properties.Resources.icons8_refresh_30;
+            this.btnUpdateChart.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdateChart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnUpdateChart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUpdateChart.Margin = new System.Windows.Forms.Padding(20, 2, 20, 2);
+            this.btnUpdateChart.Name = "btnUpdateChart";
+            this.btnUpdateChart.Size = new System.Drawing.Size(64, 66);
+            this.btnUpdateChart.Text = "بروز رسانی";
+            this.btnUpdateChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUpdateChart.Click += new System.EventHandler(this.btnUpdateChart_Click);
+            // 
             // frmSartup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 623);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
@@ -225,6 +275,8 @@
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,6 +300,9 @@
         private System.Windows.Forms.ToolStripButton btnListEmployees;
         private System.Windows.Forms.ToolStripButton btnReport;
         private System.Windows.Forms.Timer Maintimer;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMain;
+        private System.Windows.Forms.ToolStripButton btnUpdateChart;
     }
 }
 
