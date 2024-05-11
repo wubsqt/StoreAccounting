@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.gbLogin = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +57,26 @@
             this.gbLogin.TabIndex = 0;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "اطلاعات ورود";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(6, 110);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(79, 22);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "ثبت";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(92, 110);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(79, 22);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "لغو";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtPassword
             // 
@@ -105,25 +125,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(53, 53);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(92, 110);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(79, 22);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "لغو";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(6, 110);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(79, 22);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "ثبت";
-            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
