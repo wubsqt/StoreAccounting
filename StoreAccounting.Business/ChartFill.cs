@@ -8,9 +8,6 @@ namespace StoreAccounting.Business
 {
     public static class ChartFill
     {
-        public static double AvgCalc(List<double> values)
-        {
-            return values.Sum() / values.Count;
-        }
+        public static double AvgCalc(List<double> values) => (values.Sum() / values.Count);
     }
 }
