@@ -51,7 +51,7 @@ namespace StoreAccounting.App.Forms.Customer
             {
                 Customers customer = db.CustomerRepository.GetByEntity(CustomerId);
                 txtName.Text = customer.FullName;
-                txtNumber.Value = int.Parse(customer.Mobile);
+                txtNumber.Value = long.Parse(customer.Mobile);
                 txtAddress.Text = customer.Address;
                 pcCustomer.ImageLocation = Application.StartupPath + "/Images/" + customer.Image;
             }
@@ -122,7 +122,7 @@ namespace StoreAccounting.App.Forms.Customer
 
             string UniqName = Guid.NewGuid().ToString();
             string Extension = Path.GetExtension(pcCustomer.ImageLocation);
-            if (Extension != string.Empty)
+            if (Extension != null)
                 File.Copy(pcCustomer.ImageLocation, rootFolder + UniqName + Extension);
 
             using (StoreDBManager db = new StoreDBManager())
