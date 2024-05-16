@@ -47,6 +47,8 @@ namespace StoreAccounting.App
         {
             // Exporting Data From DataBase
 
+            #region Exporting Data
+
             List<double> TopProductPay = new List<double>();
             List<double> TopEmployeeSalary = new List<double>();
 
@@ -65,6 +67,8 @@ namespace StoreAccounting.App
                     .ForEach(e => TopEmployeeSalary.Add(e));
             }
 
+            #endregion
+
             double avgProductPay = ChartFill.AvgCalc(TopProductPay);
             double avgEmployeeSalary = ChartFill.AvgCalc(TopEmployeeSalary);
 
@@ -75,6 +79,8 @@ namespace StoreAccounting.App
 
             // General Index for all of Series (using for x label)
             int index = default;
+
+            #region Making Series
 
             // The List Of Top Employees
             Series sTopEm = new Series();
@@ -108,11 +114,16 @@ namespace StoreAccounting.App
             sAvgTopProd.Points.AddXY(index, avgProductPay);
             index += 1;
 
-            // Adding Series To The Chart
+            #endregion
+
+            #region Adding Series to the Chart
+
             chartMain.Series.Add(sTopEm);
             chartMain.Series.Add(sTopProd);
             chartMain.Series.Add(sAvgTopEm);
             chartMain.Series.Add(sAvgTopProd);
+
+            #endregion
         }
 
         private void UpdateTimer()
